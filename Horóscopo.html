@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horóscopo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://www.jornaldotocantins.com.br/image/policy%3A1.5048%3A1718202657%2Fimage.jpg%3Ff%3D3x2);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:  rgb(255, 80, 80);
+    color: white;
+}
+
+.header img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.banner {
+    background-color: #c0160a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.horoscope-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.horoscopo-item {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.horoscopo-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.horoscopo-item p {
+    color: #555;
+}
+footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="slide-menu" id="slide-menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="noticias.html">Notícias Gerais</a></li>
+            <li><a href='vagas.html'>Vagas de Emprego</a></li>
+            <li><a href="tempo.html">Previsão do Tempo</a></li>
+            <li><a href="esportes.html">Esportes</a></li>
+            <li><a href="assjornal.html">Assinar o Jornal</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <img src="Logo.jpeg" alt="Logo do Jornal Executive">
+        <h1>Jornal Executive</h1>
+    </header>
+    <div class="banner">
+        <h2>Horóscopo do Dia</h2>
+    </div>
+    <div class="content">
+        <div class="horoscopo-list">
+            <div class="horoscopo-item">
+                <h3>Áries (21/03 - 19/04)</h3>
+                <p>Hoje é um ótimo dia para tomar iniciativas e começar novos projetos!</p>
+            </div>
+            <br>
+            <div class="horoscopo-item">
+                <h3>Touro (20/04 - 20/05)</h3>
+                <p>Foque nas suas relações pessoais e no autocuidado.</p>
+            </div>
+            <br>
+            <div class="horoscopo-item">
+                <h3>Gêmeos (21/05 - 20/06)</h3>
+                <p>Seja curioso e busque aprender algo novo hoje.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; Todos os direitos reservados - Jornal Executive</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

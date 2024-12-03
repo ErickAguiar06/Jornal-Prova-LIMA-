@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Gerais - Jornal Executive</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #c0160a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-item h3 {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .news-item p {
+            margin: 0 15px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+}
+        .button {
+    display: inline-block;
+    background-color: #c0160a;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    text-align: center; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #a10d08;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+h1 {
+    color: white;
+}
+.menu-toggle {
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgb(255, 200, 127);
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: left 0.3s;
+    z-index: 1000;
+}
+.slide-menu.active {
+    left: 0;
+}
+.menu-toggle.active {
+    left:250px;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.slide-menu ul li {
+    padding: 15px;
+}
+.slide-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.slide-menu ul li a:hover {
+    background-color: #a71005;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="slide-menu" id="slide-menu">
+        <ul>
+            <li><a href='index.html'>Inicio</a></li>
+            <li><a href='vagas.html'>Vagas de Emprego</a></li>
+            <li><a href='Horóscopo.html'>Horóscopo</a></li>
+            <li><a href='tempo.html'>Previsão do Tempo</a></li>
+            <li><a href='noticias.html'>Notícias Gerais</a></li>
+            <li><a href='assjornal.html'>Assinar o Jornal</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Esportes</h1>
+    </header>
+
+    <div class="container">
+        <div class="news-list">
+            <div class="news-item">
+                <img src="https://placar.com.br/wp-content/uploads/2024/11/82944cc69d1300085db7afa6c5cdf6004cf6143ew.jpg" alt="Notícia 4">
+                <h3> Botafogo Conquista a Libertadores em Campanha Histórica</h3>
+                <p>O Botafogo alcançou um feito memorável ao vencer a Copa Libertadores da América pela primeira vez em sua história. Em uma final emocionante contra um adversário de peso, o time carioca triunfou com um gol nos minutos finais, garantindo a vitória por 2 a 1.</p>
+                <center> <a href="noticia4.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/12/Yuri-Alberto-e-Everton-Ribeiro.png?w=872&amp;h=462&amp;crop=1&amp;quality=85" alt="Notícia 7">
+                <h3>Corinthians e Bahia se encontram no Brasileirão em duelo direto por Libertadores</h3>
+                <p>Em um duelo direto por vaga na próxima Libertadores, Corinthians e Bahia ficam frente a frente nesta terça-feira (3), pelo Campeonato Brasileiro. A bola rola a partir das 20h (de Brasília) na Neo Química Arena, em São Paulo (SP).</p>
+                <center> <a href="noticia7.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://cdn-1.motorsport.com/images/amp/0RrXEkB0/s6/lewis-hamilton-mercedes-amg-f1.jpg" alt="Notícia 8">
+                <h3>F1: Ferrari não está preocupada com desempenho de Hamilton para 2025</h3>
+                <p>Lewis Hamilton teve uma temporada complicada, com alguns sucessos, mas ficou atrás de George Russell em diversas oportunidades, o que levantou suspeitas sobre seu ritmo e futuro na Fórmula 1. Importante lembrar que o heptacampeão fará sua transferência para a Ferrari em 202.</p>
+                <center> <a href="noticia8.html" class="button">Ver notícia</a></center>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados - Jornal Executive</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url(https://www.resimob.com.br/wp-content/uploads/2015/02/cidade-a-noite.jpg);
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .caixa-maior {
+    background-color: #000000;
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 20px;
+    width: 950px;
+    max-width: 450px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.input-cidade {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #7c7c7c2b;
+    color: #9695ff;
+    width: calc( 100% - 100px);
+
+}
+
+.botao-busca {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #1bcbd82b;
+    cursor: pointer;
+    float: right;
+}
+.img-busca {
+    width: 20px;
+}
+.caixa-media {
+    margin-top: 30px;
+}
+
+.cidade {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 300;
+}
+.temp {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.caixa-menor {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.texto-previsao {
+    color: #ffffff;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+.umidade {
+    color: #ffffff;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="slide-menu" id="slide-menu">
+        <ul>
+            <li><a href='index.html'>Inicio</a></li>
+            <li><a href='noticias.html'>Notícias Gerais</a></li>
+            <li><a href='vagas.html'>Vagas de Emprego</a></li>
+            <li><a href='Horóscopo.html'>Horóscopo</a></li>
+            <li><a href='esportes.html'>Esportes</a></li>
+            <li><a href='assjornal.html'>Assinar o Jornal</a></li>
+        </ul>
+    </nav>
+    <header class="header">
+        <img src="Logo.jpeg">
+       <h1>Jornal Executive</h1>
+    </header>
+    <div class="banner">
+        <h2>Confira a Previsão do Tempo na sua cidade</h2>
+    </div>
+    <div class="caixa-maior">
+        <input class="input-cidade" placeholder="Digite o nome da Cidade">
+        <button class="botao-busca" onclick="cliqueiNoBotao()">
+            <img class="img-busca" alt="busca" src="https://www.svgrepo.com/show/488200/find.svg">
+        </button>
+
+        <div class="caixa-media"></div>
+        <h2 class="cidade">Tempo em São Paulo</h2>
+        <p class="temp">21º C</p>
+
+        <div class="caixa-menor">
+            <p class="texto-previsao">Nublado</p>
+        </div>
+        <br>
+        <p class="unidade">Umidade: 76%</p>
+
+    </div>
+    <footer class="footer">
+        <p>&copy; Todos os direitos reservados - Jornal Executive</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

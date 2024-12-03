@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Gerais - Jornal Executive</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #c0160a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-item h3 {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .news-item p {
+            margin: 0 15px 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            margin-top: 20px;
+        }
+        .button {
+    display: inline-block;
+    background-color: #c0160a;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    text-align: center; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #a10d08;
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+h1 {
+    color: white;
+}
+.menu-toggle {
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgb(255, 200, 127);
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: left 0.3s;
+    z-index: 1000;
+}
+.slide-menu.active {
+    left: 0;
+}
+.menu-toggle.active {
+    left:250px;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.slide-menu ul li {
+    padding: 15px;
+}
+.slide-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.slide-menu ul li a:hover {
+    background-color: #a71005;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="slide-menu" id="slide-menu">
+        <ul>
+            <li><a href='index.html'>Inicio</a></li>
+            <li><a href='vagas.html'>Vagas de Emprego</a></li>
+            <li><a href='Horóscopo.html'>Horóscopo</a></li>
+            <li><a href='tempo.html'>Previsão do Tempo</a></li>
+            <li><a href='esportes.html'>Esportes</a></li>
+            <li><a href='assjornal.html'>Assinar o Jornal</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Notícias Gerais</h1>
+    </header>
+
+    <div class="container">
+        <div class="news-list">
+            <div class="news-item">
+                <img src="https://th.bing.com/th/id/OIP.mXh-Jn1O22bOUzP9LZ9brAHaEc?rs=1&pid=ImgDetMain" alt="Notícia 1">
+                <h3> Avanço na Exploração Espacial</h3>
+                <p>A NASA revelou uma descoberta extraordinária: um exoplaneta na constelação de Orion que pode conter condições para abrigar vida. Com características semelhantes às da Terra, o exoplaneta, batizado de Orion-6b, está a cerca de 1.200 anos-luz de distância. Segundo cientistas, ele apresenta indícios de água líquida e uma atmosfera estável, fatores essenciais para a existência de vida. Especialistas já consideram esta descoberta um marco na astronomia, abrindo novas possibilidades para o estudo do universo e da vida extraterrestre.</p>
+                <center> <a href="noticia1.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://imagens.ebc.com.br/q-qOIZefJJtBUVablieTHFCACrQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210412_0.jpg?itok=gmIbQxQm" alt="Notícia 2">
+                <h3>Economia em Alta</h3>
+                <p>O Produto Interno Bruto (PIB) do país registrou um crescimento expressivo de 3% no último trimestre, impulsionado principalmente pelo setor industrial. Exportações recordes e um aumento na produção nacional foram os principais motores desse avanço. Economistas apontam que políticas econômicas recentes e investimentos em infraestrutura desempenharam um papel fundamental nesse crescimento. O mercado de trabalho também apresentou sinais positivos, com a criação de mais de 500 mil empregos no período.</p>
+                <center> <a href="noticia2.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://www.duosystem.com.br/wp-content/uploads/2023/11/Tecnologia-na-Saude.png" alt="Notícia 3">
+                <h3>Nova Tecnologia Revoluciona Saúde</h3>
+                <p>Uma nova vacina desenvolvida por cientistas promete revolucionar o tratamento de certos tipos de câncer. Este avanço utiliza nanotecnologia para atacar células cancerígenas de forma mais eficiente, reduzindo os efeitos colaterais tradicionais. Os primeiros testes clínicos apresentaram resultados promissores, com taxas de remissão superiores a 80%. Especialistas acreditam que esta inovação pode ser um divisor de águas na luta contra doenças graves, salvando milhões de vidas.</p>
+                <center> <a href="noticia3.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://placar.com.br/wp-content/uploads/2024/11/82944cc69d1300085db7afa6c5cdf6004cf6143ew.jpg" alt="Notícia 4">
+                <h3> Botafogo Conquista a Libertadores em Campanha Histórica</h3>
+                <p>O Botafogo alcançou um feito memorável ao vencer a Copa Libertadores da América pela primeira vez em sua história. Em uma final emocionante contra um adversário de peso, o time carioca triunfou com um gol nos minutos finais, garantindo a vitória por 2 a 1.</p>
+                <center> <a href="noticia4.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://s2-g1.glbimg.com/o9FNvc7MvrNjkIW5dEKs6BtHlt0=/0x145:1500x940/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/x/m/CcG7SWSzKFrFc15TtA3g/roberto-torrecilhas-5-.jpeg" alt="Notícia 5">
+                <h3>Carreta tomba em rodovia de Jaguariúna</h3>
+                <p>Um caminhão ficou com as rodas para cima após tombar no canteiro de alça de acesso da Rodovia Governador Doutor Adhemar Pereira de Barros (SP-340) para a Rodovia João Beira (SP-095), na manhã deste domingo (27), em Jaguariúna (SP).</p>
+                <center> <a href="noticia5.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://www.pmpf.rs.gov.br/cultura/wp-content/uploads/sites/25/2021/12/I2021-11-26_19_39_23_106220-300x200.jpg" alt="Notícia 6">
+                <h3>Cultura: Festival Internacional de Folclore</h3>
+                <p>Diferentes maneiras de conectar a cultura com as pessoas vão se somar ao entusiasmo, a alegria e a motivação de uma cidade que tornou-se palco para grandes festivais. A Prefeitura de Passo Fundo confirmou para agosto de 2022 a retomada do Festival Internacional de Folclore, um dos principais eventos de valorização das múltiplas expressões artísticas sediados no município.</p>
+                <center> <a href="noticia6.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/12/Yuri-Alberto-e-Everton-Ribeiro.png?w=872&amp;h=462&amp;crop=1&amp;quality=85" alt="Notícia 7">
+                <h3>Corinthians e Bahia se encontram no Brasileirão em duelo direto por Libertadores</h3>
+                <p>Em um duelo direto por vaga na próxima Libertadores, Corinthians e Bahia ficam frente a frente nesta terça-feira (3), pelo Campeonato Brasileiro. A bola rola a partir das 20h (de Brasília) na Neo Química Arena, em São Paulo (SP).</p>
+                <center> <a href="noticia7.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://cdn-1.motorsport.com/images/amp/0RrXEkB0/s6/lewis-hamilton-mercedes-amg-f1.jpg" alt="Notícia 8">
+                <h3>F1: Ferrari não está preocupada com desempenho de Hamilton para 2025</h3>
+                <p>Lewis Hamilton teve uma temporada complicada, com alguns sucessos, mas ficou atrás de George Russell em diversas oportunidades, o que levantou suspeitas sobre seu ritmo e futuro na Fórmula 1. Importante lembrar que o heptacampeão fará sua transferência para a Ferrari em 202.</p>
+                <center> <a href="noticia8.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://www.opovo.com.br/_midias/jpg/2022/01/10/750x500/1_ultimas_noticias_de_hoje_11_de_janeiro_sobre_tragedia_em_capitolio_minas_gerais-17855721.jpg" alt="Notícia 9">
+                <h3>Tragédia em Capitólio (MG)</h3>
+                <p>Um desabamento de pedras em um cânion no Lago de Furnas, na cidade de Capitólio, Minas Gerais (MG), vitimou 10 pessoas no sábado, dia 8. Confira últimas notícias sobre o acidente.</p>
+                <center> <a href="noticia9.html" class="button">Ver notícia</a></center>
+            </div>
+            <div class="news-item">
+                <img src="https://cdn6.campograndenews.com.br/uploads/noticias/2024/12/03/gyhwzycylz5t.png" alt="Notícia 10">
+                <h3>Após reabilitação, 60 animais silvestres são reintegrados à natureza</h3>
+                <p>Mais de 60 animais silvestres foram reintegrados à natureza pelo Imasul após reabilitação no Cras, em uma ação que destaca a importância da preservação ambiental. A soltura, realizada no Recanto Ecológico Rio da Prata, incluiu diversas espécies, como lobinhos, bugios, corujas-buraqueiras e várias aves, totalizando cerca de 23 periquitos e mais de 20 jandaias. A gestora do Cras, Aline Duarte, e o diretor-presidente do Imasul, André Borges, enfatizaram o valor do trabalho técnico e das políticas públicas que visam fortalecer a biodiversidade e o equilíbrio dos ecossistemas, proporcionando uma nova chance de vida aos animais resgatados de situações adversas como atropelamentos e tráfico ilegal. - CREDITO: CAMPO GRANDE NEWS</p>
+                <center> <a href="noticia10.html" class="button">Ver notícia</a></center>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados - Jornal Executive</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
